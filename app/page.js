@@ -1,28 +1,50 @@
 import Link from "next/link"
 import { BrainCircuit, MessageCircle, Zap, Globe, Twitter } from "lucide-react"
 import { PinContainer } from "@/components/ui/3d-pin"
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards"
 
 export default function Home() {
+  const testimonials = [
+    {
+      quote:
+        "sol is the native cryptocurrency of the solana blockchain. it's designed for fast, low-cost transactions, making it perfect for tipping and microtransactions on platforms like this one.",
+    },
+    {
+      quote:
+        "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+    },
+    {
+      quote: "All that we see or seem is but a dream within a dream.",
+    },
+    {
+      quote:
+        "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+    },
+    {
+      quote:
+        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+    },
+  ];
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center  border-b">
+      <header className="sticky top-0 z-50 bg-white/90 px-4 lg:px-6 h-14 flex items-center  border-b">
         <Link className="flex items-center justify-center" href="#">
           <BrainCircuit className="h-6 w-6 mr-2 text-primary" />
           <span className="font-bold text-xl">TweetSage</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:text-primary transition-colors" href="#examples">
+          <Link className="text-sm font-medium hover:font-bold  transition-colors" href="#examples">
             Examples
           </Link>
-          <Link className="text-sm font-medium hover:text-primary transition-colors" href="#features">
+          <Link className="text-sm font-medium hover:font-bold transition-colors" href="#features">
             Features
           </Link>
-          <Link className="text-sm font-medium hover:text-primary transition-colors" href="#how-it-works">
+          <Link className="text-sm font-medium hover:font-bold transition-colors" href="#how-it-works">
             How It Works
           </Link>
           <Link
-            className="text-sm font-medium hover:text-primary transition-colors"
-            href="https://twitter.com/TweetSage"
+            className="text-sm font-medium hover:font-bold transition-colors"
+            href="https://x.com/TweetSage_AI"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -46,8 +68,8 @@ export default function Home() {
               </div>
               <div className="py-8 w-full flex items-center justify-center ">
                 <PinContainer
-                  title="/ui.aceternity.com"
-                  href="https://twitter.com/mannupaaji"
+                  title="x.com/TweetSage_AI"
+                  href="https://x.com/TweetSage_AI"
                 >
                   <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
                     <h3 className="max-w-xs font-semibold  text-xl text-slate-100">
@@ -66,15 +88,22 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50" id="examples">
-          <div className=" px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">
-              TweetSage in Action
-            </h2>
+        <section className="w-full py-12 md:py-24 bg-white" id="examples">
 
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">
+            TweetSage in Action
+          </h2>
+          <div className="h-[25rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+            <InfiniteMovingCards
+              items={testimonials}
+              direction="right"
+              speed="slow"
+            />
           </div>
+
+
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32" id="features">
+        <section className="w-full py-12 md:py-24 " id="features">
           <div className=" px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">
               Key Features
@@ -88,7 +117,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
-                <Zap className="h-10 w-10 text-primary" />
+                <Zap className="h-10 w-10  text-primary" />
                 <h3 className="text-xl font-bold">No App Switching</h3>
                 <p className="text-gray-500 ">
                   Stay on Twitter. No need to leave the platform or open new tabs.
@@ -104,7 +133,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50" id="how-it-works">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-white border-t " id="how-it-works">
           <div className="px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">
               How It Works
@@ -119,9 +148,9 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white">2</div>
-                <h3 className="text-xl font-bold">Tag @TweetSage</h3>
+                <h3 className="text-xl font-bold">Tag @TweetSage_AI</h3>
                 <p className="text-gray-500 ">
-                  Reply to the tweet and mention @TweetSage with your question.
+                  Reply to the tweet and mention @TweetSage_AI with your question.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
@@ -152,13 +181,13 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full bg-primary shrink-0 items-center px-4 md:px-6 ">
         <p className="text-xs text-gray-500">© 2025 TweetSage. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
+          <Link className="text-xs text-gray-500 hover:underline underline-offset-4" href="#">
             Terms of Service
           </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
+          <Link className="text-xs text-gray-500 hover:underline underline-offset-4" href="#">
             Privacy
           </Link>
         </nav>
