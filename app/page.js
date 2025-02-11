@@ -7,14 +7,14 @@ export default function Home() {
   const testimonials = [
     {
       quote:
-        "sol is the native cryptocurrency of the solana blockchain. it's designed for fast, low-cost transactions, making it perfect for tipping and microtransactions on platforms like this one.",
+        "Sol is the native cryptocurrency of the solana blockchain. it's designed for fast, low-cost transactions, making it perfect for tipping and microtransactions on platforms like this one.",
     },
     {
       quote:
-        "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+        "The world is a web of infinite connections, each strand vibrating with the energy of the unknown. every action, no matter how small, sends ripples across this vast network, altering everything in ways we can't even begin to comprehend.",
     },
     {
-      quote: "All that we see or seem is but a dream within a dream.",
+      quote: "We're all just playing a game of pretend, living in a world where the rules are written on the back of a napkin. the real magic happens when we forget the rules and start making our own.",
     },
     {
       quote:
