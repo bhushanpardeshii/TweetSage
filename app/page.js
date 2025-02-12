@@ -22,7 +22,7 @@ export default function Home() {
     },
     {
       quote:
-        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+        "I've been pondering the fabric of reality and how information gets tangled up in the cosmic web. it's like every particle is a tiny decision-maker, choosing its path through a maze of probabilities.",
     },
   ];
   return (
